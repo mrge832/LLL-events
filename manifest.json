@@ -5,7 +5,7 @@
   "content_scripts": [
     {
       "matches":["https://littlelifelab.co/events/*"],
-      "js":["content.js", "add_gcal_url.js"]
+      "js":["script.js", "add_gcal_url.js"]
     }
   ]
 }
