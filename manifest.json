@@ -4,8 +4,7 @@
   "manifest_version": 2,
   "content_scripts": [
     {
-      "matches":["http://www.google.com/*"],
-      "css":["mystyles.css"],
+      "matches":["https://littlelifelab.co/events/*"],
       "js":["content.js", "add_gcal_url.js"]
     }
   ]
