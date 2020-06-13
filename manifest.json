@@ -6,7 +6,7 @@
     {
       "matches":["http://www.google.com/*"],
       "css":["mystyles.css"],
-      "js":["content.js"]
+      "js":["content.js", "add_gcal_url.js"]
     }
   ]
 }
