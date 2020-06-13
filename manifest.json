@@ -1,0 +1,12 @@
+{
+  "name": "LLL event converter",
+  "version": "0.1",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches":["http://www.google.com/*"],
+      "css":["mystyles.css"],
+      "js":["content.js"]
+    }
+  ]
+}
