@@ -1,4 +1,4 @@
-var URL = alert(location.href);
+var URL = location.href;
 //'https://www.google.com/calendar/render?action=TEMPLATE&text=%E3%83%8A%E3%83%81%E3%83%A5%E3%83%A9%E3%83%AB%E3%83%AA%E3%83%83%E3%83%97%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8BWorkshop&dates=20200628T040000Z/20200628T060000Z&location=%E6%9C%AA%E5%AE%9A&trp=true&trp=undefined&trp=true&';
 //本来はここで検索と分解
 /*var Calendar = 'g2466jvdp4rmvmbc23havk6dc4%40group.calendar.google.com';
@@ -11,7 +11,13 @@ var NewURL = 'https://www.google.com/calendar/render?action=TEMPLATE' +
 '&details=' + Info +
 '&trp=true&trp=undefined&trp=true&'; */
 
-chrome.tabs.create({url: URL});
+chrome.tabs.create({url: URL}, function(tab));
+
+/*chrome.browserAction.onClicked.addListener(function() {
+    chrome.tabs.create({ url: URL });
+}); */
+
+//window.open(url,URL);
 
 /*
 'http://www.google.com/calendar/event?' +
