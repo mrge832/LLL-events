@@ -11,7 +11,7 @@ var NewURL = 'https://www.google.com/calendar/render?action=TEMPLATE' +
 '&details=' + Info +
 '&trp=true&trp=undefined&trp=true&'; */
 
-chrome.tabs.create(object URL);
+chrome.tabs.create({url: URL});
 
 /*
 'http://www.google.com/calendar/event?' +
