@@ -5,10 +5,11 @@
   "permissions": [
           "tabs"
         ],
-  "content_scripts": [
-    {
+  "background": {
+      "scripts": ["background.js"]
+    },
+  "content_scripts": [{
       "matches":["https://littlelifelab.co/events/*"],
       "js":["script.js"]
-    }
-  ]
+    }]
 }
