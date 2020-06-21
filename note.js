@@ -18,3 +18,41 @@ var Info = 'テスト' //エンコードが必要
 var newURL = URL1 + '&src=' + Calendar + URL2 + '&details=' + Info + URL3;
 
 console.log(newURL);
+
+
+
+//[6]のHTMLCollectionを取得する
+
+var Info = document.getElementsByClassName('articleBody')[0];
+var Elements = Info.childElementCount;
+var fullText = location.href;
+
+var i = 6;
+//for (let i = 0; i < Elements; i++) {
+  var infoTag = Info.children[i];
+  var infoText = infoTag.innerHTML;
+  var cleanText = infoText + '<br>';
+
+  if (infoText.includes('<br>'))
+    cleanText = infoText;
+  else if (infoText.includes('href'))
+    cleanText = infoTag.children[0].href + '<br>';
+  else if (infoText.includes('<span')) {
+    cleanText = infoTag.children[0].innerText + '<br>';
+    if (infoText.includes('<img draggable')) {
+      var findEmoji = '';
+      for (let j = 0; j < infoTag.childElementCount; j++)
+        findEmoji += infoTag.children[j].alt;
+      cleanText = infoTag.children[0].innerText + findEmoji + '<br>';
+    }
+  }
+  else if (infoText.includes('<img src') && !(infoText.includes('<img draggable')))
+    cleanText = infoTag.innerText + '<br>';
+  /*else if (infoText.includes('<img draggable')) {
+    findEmoji = '';
+    for (let j = 0; j < infoTag.childElementCount; j++)
+      findEmoji += infoTag.children[j].alt;
+    cleanText = infoTag.innerText + findEmoji + '<br>';
+  } */
+
+  console.log(infoTag.children);
