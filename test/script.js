@@ -11,9 +11,9 @@ var URL2 = eventURL.slice(result1, result2);
 var URL3 = eventURL.slice(result2);
 
 var Calendar = 'g2466jvdp4rmvmbc23havk6dc4%40group.calendar.google.com';
-//var Info = 'テスト' //エンコードが必要
+var Info = location.href;
 
-var newURL = URL1 + '&src=' + Calendar + URL2 + /*'&details=' + Info + */URL3;
+var newURL = URL1 + '&src=' + Calendar + URL2 + '&details=' + Info + URL3;
 
 window.open(newURL);
 
